@@ -10,6 +10,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 api = Api(app)
 db = SQLAlchemy(app)
 
+db.create_all()
+
+
 parser = reqparse.RequestParser()
 parser.add_argument('author')
 parser.add_argument('text')
